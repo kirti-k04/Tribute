@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .container{
+            padding: 16px;
+        }
+        input[type=text], input[type=password]
+        {
+            width:30%;
+            padding:15px;
+            margin: 5px 0 220x 0;
+            display: inline-block;
+            border: none;
+            background: #ebecf0;
+        }
+        input[type=text]:focus,
+        input[type=password]:focus{
+            background-color:white;
+            outline: none;
+        }
+        .register{
+            background-color: #2a4694;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border:none;
+            cursor: pointer;
+            width: 15%;
+            opacity: 0.9;
+        }
+        .register:hover{
+            opacity: 1;
+        }
+        a{
+            color: rgb(17, 68, 119);
+        }
+        .signin{
+            background-color: #ecedee;
+            text-align: center;
+        }</style></head>
+    <body background="starry.jpg">
+        <form action="signin.html">
+            <img src="kalpana.jpg" align="right"  width="25%" height="20%" hspace="50" vspace="20">
+            <div class="container" style="color: white;">
+                <h1>Register</h1>
+                <p><b>Please fill in the form to create an account</b></p>
+                </p><label for="email"><b>Email</b></label>
+                <p></style><input type="text" placeholder="Enter Email" name="email" id="email" required></p>
+                <label for="psw"><b>Password</b></label>
+                <p><input type="password" placeholder="Enter Password" name="psw" id="psw" required></p>
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <p><input type="password" placeholder="Repeat Password" name="psw-repeat" id=psw-repeat required></p>
+                <p></p><button type="submit" class="register">Register</button></p></div>
+            <div class="container signin">
+                <p>Already have an account?<a href="signin.html">Sign in</a></p></div>
+        </form>
+    </body>
+
+</html>
