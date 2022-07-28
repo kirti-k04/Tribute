@@ -1,0 +1,256 @@
+/*!Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;600&family=IBM+Plex+Serif:wght@400;700&display=swap');
+
+/*!Variables*/
+:root {
+    --link-hover: #ffd000;
+    --light-bg: #f5f5f5;
+    --dark-bg: #1a043e;
+    --light: white;
+    --dark: black;
+
+}
+
+/*!Images*/
+section>div:last-child {
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+section:first-of-type>div:last-child {
+    background-image: url('assets/img1.jpg');
+    filter: contrast(105%);
+}
+
+section:nth-of-type(3)>div:last-child {
+    background-image: url('assets/img2.jpg');
+    filter: brightness(95%);
+}
+
+section:nth-of-type(4)>div:last-child {
+    background-image: url('assets/img3.png');
+
+}
+
+section:nth-of-type(5)>div:last-child {
+    background-image: url('assets/img4.jpg');
+    background-position: top;
+    
+}
+
+section:nth-of-type(6)>div:last-child {
+    background-image: url('assets/img5.jpg');
+    
+}
+
+section:nth-of-type(7)>div:last-child {
+    background-image: url('assets/img6.jpg');
+    
+}
+
+section:nth-of-type(8)>div:last-child {
+    background-image: url('assets/img7.jpg');
+    
+}
+
+section:nth-of-type(3)>div:last-child,
+section:nth-of-type(4)>div:last-child,
+section:nth-of-type(5)>div:last-child {
+    image-rendering: pixelated;
+}
+
+/*!Custom Scrollbar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #bdbdbd;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #333333;
+}
+
+
+/*!Skeleton*/
+* {
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*!Image sections*/
+section>div:last-of-type {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+}
+
+section>div:last-of-type>span {
+    font-family: 'IBM Plex Sans';
+    text-align: end;
+    position: absolute;
+    color: var(--light);
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+section>div:last-of-type>span:hover {
+    color: var(--dark);
+    background-color: var(--link-hover);
+}
+
+/*!Text sections*/
+section>div:first-of-type {
+    min-height: 50vh;
+}
+
+section:nth-of-type(2)>div:last-child {
+    text-align:justify;
+    color: var(--dark-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    gap: 1rem;
+}
+section:nth-of-type(odd)>div:first-of-type {
+    background: var(--dark-bg);
+    color: var(--light);
+}
+
+
+section:nth-of-type(even)>div:first-of-type {
+    background: var(--light-bg);
+    color: var(--dark);
+}
+
+
+p {
+    font-family: 'IBM Plex Sans', Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+    padding: 10vw;
+    text-align: justify;
+}
+
+
+/*!First section*/
+section:nth-of-type(1)>div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    gap: 1rem;
+}
+
+section:nth-of-type(2)>div:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    gap: 1rem;
+}
+
+
+h1 {
+    font-family: 'IBM Plex Serif';
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+
+h2 {
+    font-family: 'IBM Plex Sans';
+    font-weight: 300;
+}
+
+/* ! Last Section*/
+section:last-of-type>div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10vw;
+    gap: 1rem;
+}
+
+/*! Links*/
+a {
+    color: var(--dark-bg);
+}
+
+ion-icon:hover {
+    background-color: var(--link-hover);
+    border-radius: 50%;
+}
+
+/*! Footer*/
+footer {
+    font-family: 'IBM Plex Serif';
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--dark-bg);
+    color: var(--light);
+}
+
+ion-icon {
+    margin-top: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 0.3rem;
+}
+
+
+/*!Large devices*/
+@media (min-width: 992px) {
+/*!Skeleton*/
+section {
+    display: flex;
+    height: 100vh;
+}
+
+section:nth-of-type(odd) {
+    flex-direction: row;
+}
+
+section:nth-of-type(even) {
+    flex-direction: row-reverse;
+}
+
+section>div {
+    flex: 50%;
+}
+
+/*!Image sections*/
+section>div:last-of-type {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+section>div:first-of-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    line-height: 1.3rem;
+    padding: 3rem 0;
+    width: 60%;
+}
+}
